@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Admin</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/wysiwyg.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div id="main-content">
+	<!-- notifications -->
+	<div class="notification attention">
+		<span>Attention notification.</span>
+	</div>
+	<div class="notification info">
+		<span>Info notification.</span>
+	</div>
+	
+	<div class="notification success">
+		<span>Success notification.</span>
+	</div>
+	
+	<div class="notification error">
+		<span>Error notification.</span>
+	</div>
+	
+	<!-- content -->
+	<div class="box">
+		<div class="box-title">Table</div>
+		<div class="box-content">
+			<form action="#" method="post">
+				<table>
+					<thead>
+						<tr>
+							<th><input class="check-all" type="checkbox" /></th>
+							<th>Column 1</th>
+							<th>Column 2</th>
+							<th>Column 3</th>
+							<th>Column 4</th>
+						</tr>
+					</thead>
+					
+					<tfoot>
+						<tr>
+							<td colspan="6">
+								<div class="form-mass-actions">
+									<select name="dropdown">
+										<option value="0"> == Choose action == </option>
+										<option value="opt1">Show to visitors</option>
+										<option value="opt2">Do not show to visitors</option>
+										<option value="opt2">Delete</option>
+									</select>
+									<input type="submit" name="submit" value="Submit" class="button" />
+								</div>
+								
+								<div class="clear"></div>
+							</td>
+						</tr>
+					</tfoot>
+					
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Lorem ipsum </td>
+							<td>dolor sit amet</td>
+							<td>The quick brown fox jumps over the lazy dog</td>
+							<td><a href="#"><img src="images/edit-16.png" alt="Edit" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Lorem ipsum </td>
+							<td>dolor sit amet</td>
+							<td>The quick brown fox jumps over the lazy dog</td>
+							<td><a href="#"><img src="images/edit-16.png" alt="Edit" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Lorem ipsum </td>
+							<td>dolor sit amet</td>
+							<td>The quick brown fox jumps over the lazy dog</td>
+							<td><a href="#"><img src="images/edit-16.png" alt="Edit" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Lorem ipsum </td>
+							<td>dolor sit amet</td>
+							<td>The quick brown fox jumps over the lazy dog</td>
+							<td><a href="#"><img src="images/edit-16.png" alt="Edit" /></a></td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</form>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="box-title">Forms</div>
+		<div class="box-content">
+			<form action="#" method="post">
+				<fieldset class="column-left">
+					<p>
+						<label>Input Form 1</label>
+						<input class="text-input large-input" type="text" name="input1" />
+					</p>
+					
+					<p>
+						<label>Input Form 2</label>
+						<input class="text-input large-input" type="text" name="input2" />
+					</p>
+				</fieldset>
+				<fieldset class="column-right">
+					<p>
+						<label>Category</label>              
+						<select name="dropdown" class="medium-input">
+							<option value="option1">Option 1</option>
+							<option value="option2">Option 2</option>
+							<option value="option3">Option 3</option>
+							<option value="option4">Option 4</option>
+						</select> 
+					</p>
+					<p>
+						<label>Visibility</label>
+						<input type="checkbox" name="checkbox1" /> Show
+					</p>
+				</fieldset>
+				<div class="clear"></div>
+				<fieldset>
+					<p>
+						<label>Textarea</label>
+						<div class="shortcuthtml">
+							<ul class="panel">
+								<li><a onclick="insertTag('<strong>', '<strong>', 'textarea')">Bold</a></li>
+								<li><a onclick="insertTag('<em>', '</em>', 'textarea')">Italic</a></li>
+								<li class="separator"></li>
+								<li><a onclick="insertTag('<h1>', '</h1>', 'textarea')">h1</a></li>
+								<li><a onclick="insertTag('<h2>', '</h2>', 'textarea')">h2</a></li>
+								<li><a onclick="insertTag('<h3>', '</h3>', 'textarea')">h3</a></li>
+								<li><a onclick="insertTag('<h4>', '</h4>', 'textarea')">h4</a></li>
+								<li><a onclick="insertTag('<h5>', '</h5>', 'textarea')">h5</a></li>
+								<li><a onclick="insertTag('<h6>', '</h6>', 'textarea')">h6</a></li>
+								<li class="separator"></li>
+								<li><a onclick="insertTag('<p>', '</p>', 'textarea')">Paragraph</a></li>
+								<li><a onclick="insertTag('<pre>', '</pre>', 'textarea')">Preformatted</a></li>
+								<li class="separator"></li>
+								<li><a onclick="insertTag('', '', 'textarea', 'link')">Link</a></li>
+								<li><a onclick="insertTag('', '', 'textarea', 'image')">Image</a></li>
+							</ul>
+						</div>
+						<textarea class="text-input textarea" id="textarea" name="textfield" cols="79" rows="15"></textarea>
+					</p>
+					
+					<p>
+						<input class="button" type="submit" value="Submit" />
+					</p>
+				</fieldset>
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="box closed-box">
+		<div class="box-title">Content</div>
+		<div class="box-content">
+			<div class="tab-content default-tab">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a dui et magna sagittis ornare sed ut nulla. Quisque mattis est ac sem tempus id ultrices tortor vulputate. Quisque id libero vel eros imperdiet varius. Maecenas leo ligula, dapibus in sodales non, commodo sit amet elit. Pellentesque dapibus vulputate interdum. Nam auctor purus id nunc ultrices ullamcorper. Aliquam erat volutpat. Vestibulum viverra tincidunt facilisis. Integer rhoncus mi vel risus lacinia adipiscing. Nunc elementum dui vel risus vulputate eu ullamcorper nisl feugiat. Suspendisse dignissim tempor dictum. Donec sed tortor in urna ultricies ultrices.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box column-left">
+		<div class="box-title">Content box left</div>
+		<div class="box-content">
+			<div class="tab-content default-tab">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a dui et magna sagittis ornare sed ut nulla. Quisque mattis est ac sem tempus id ultrices tortor vulputate. Quisque id libero vel eros imperdiet varius. Maecenas leo ligula, dapibus in sodales non, commodo sit amet elit. Pellentesque dapibus vulputate interdum. Nam auctor purus id nunc ultrices ullamcorper. Aliquam erat volutpat. Vestibulum viverra tincidunt facilisis. Integer rhoncus mi vel risus lacinia adipiscing. Nunc elementum dui vel risus vulputate eu ullamcorper nisl feugiat. Suspendisse dignissim tempor dictum. Donec sed tortor in urna ultricies ultrices.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box column-right">
+		<div class="box-title">Content box right</div>
+		<div class="box-content">
+			<div class="tab-content default-tab">
+				<h4>Lorem ipsum dolor sit amet</h4>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a dui et magna sagittis ornare sed ut nulla. Quisque mattis est ac sem tempus id ultrices tortor vulputate. Quisque id libero vel eros imperdiet varius. Maecenas leo ligula, dapibus in sodales non, commodo sit amet elit. Pellentesque dapibus vulputate interdum. Nam auctor purus id nunc ultrices ullamcorper. Aliquam erat volutpat. Vestibulum viverra tincidunt facilisis. Integer rhoncus mi vel risus lacinia adipiscing. Nunc elementum dui vel risus vulputate eu ullamcorper nisl feugiat. Suspendisse dignissim tempor dictum. Donec sed tortor in urna ultricies ultrices.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+</div>
+
+
+<div id="right-sidebar">
+	<div id="right-sidebar-content">
+		<div id="admin-session-info">
+			<p>Login as Administrator<br />
+			<a href="#" title="View the Site">View the Site</a> | <a href="#" title="Sign Out">Sign Out</a></p>
+		</div>
+	
+		<ul id="navigation">
+			<li><a href="#" class="navigation-parent no-submenu">Dashboard</a></li>
+			<li><a href="#" class="navigation-parent current">Articles</a>
+				<ul>
+					<li><a href="#">New Article</a></li>
+					<li><a class="current" href="#">Manage Articles</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="navigation-parent">Categories</a>
+				<ul>
+					<li><a href="#">Create New Category</a></li>
+					<li><a href="#">manage Category</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+	
+</body>
+</html>

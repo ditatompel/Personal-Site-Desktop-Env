@@ -1,0 +1,79 @@
+html {
+	margin: 0;
+}
+body {
+	padding: 0;
+	font-family: verdana, arial, sans-serif;
+	font-size: 90%;
+}
+h1 {
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 120%;
+	letter-spacing: .10em;
+}
+h3, h4 {
+	font-size: 100%;
+	line-height:1em;
+	letter-spacing: .07em;
+}
+h4 {
+	font-style: italic;
+	font-weight: normal;
+	margin: 1em 0 0.5em 0;
+}
+
+blockquote	{ margin: 0 0 18px 4px; padding: 0 16px; font-style: italic; border-left: 5px solid #bbb;}
+code, pre	{ font: normal 13px/18px Consolas, "Courier New", Courier, monospace; 
+			  background: #E8EBEC url("../images/pre-bg.gif") repeat 0 0;
+			  padding: 18px 5px; border: 1px dotted #bbb; color: #333; }
+code		{ padding: 1px 3px; background-image: none; }
+
+div#documentation_content {
+	width: 85%;
+}
+h1.title {
+	margin-bottom:2px;
+	display:block;
+	background-color:#B8BBBC;
+}
+h2.subtitle {
+	margin-bottom:2px;
+	display:block;
+	background-color:#C8CBBC;
+}
+ul.submenu {
+	display:inline;
+	margin:0;
+	padding:100px 0 0 0;
+}
+
+div.title {
+	padding: 15px 0;
+	text-align: center;
+	font-size: 100%;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+
+div#menu { 
+	position: fixed;
+	z-index: 2;
+	width: 10%;
+	height: 100%;
+	top: 100px; right: 10px;
+}
+div#menu a {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+ol, ol li  {
+	margin: 0;
+	list-style-type: none;
+	padding: 2px 0;
+	text-indent: 0;
+	text-align: right;
+}

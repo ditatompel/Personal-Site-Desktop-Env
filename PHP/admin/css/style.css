@@ -1,0 +1,295 @@
+html {
+	height: 100%;
+	font-size: 100%;
+	margin-bottom: 1px;
+}
+
+body {
+	background: #f0f0f0 url('../images/bg-body.gif') top right repeat-y;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+              
+
+/********************************      Elements styling      ********************************/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #222;
+	font-weight: bold;
+}
+
+h1 { font-size: 31px; padding: 0 0 10px 0; }
+h2 { font-size: 26px; padding: 0 0 10px 0; }
+h3 { font-size: 17px; padding: 0 0 10px 0; }
+h4 { font-size: 16px; padding: 0 0 5px 0; }
+h5 { font-size: 14px; padding: 0 0 5px 0; }
+h6 { font-size: 12px; padding: 0 0 5px 0; }
+
+
+a { color: #0f8f5a; text-decoration: none; }
+a:hover { color: #57a000; }
+a:active { color: #777; }
+a:focus { outline: 1px; }
+strong { font-weight: bold; color: #333; }
+pre { font-family: Courier, "Courier New", monospace; }
+p {
+	padding: 5px 0 10px 0;
+	line-height: 1.6em;
+}
+
+.clear { clear: both; }
+
+/************ Button ************/
+.button {
+	display: inline-block;
+	background: #BC0000 url('../images/bg-button.gif') top left repeat-x !important;
+	border: 1px solid #BC0000 !important;
+	padding: 4px 7px;
+	color: #fff !important;
+	font-size: 11px !important;
+	cursor: pointer;
+}
+                
+.button:hover {
+	background: #0f8f5a url('../images/bg-button-hover.gif') top left repeat-x !important;
+	border: 1px solid #0f8f5a !important;
+	text-decoration: none;
+}
+
+/********************************      Main Content      ********************************/
+
+/************ Layout ************/
+
+#main-content {
+	margin: 0 252px 0 30px;
+	padding: 20px 0 0 0;
+}
+
+.column-left {
+	width: 48%;
+	float: left;
+}
+                
+.column-right {
+	width: 48%;
+	float: right;
+}
+
+/*************** Content Box ***************/
+.box {
+	border: 1px solid #ccc;
+	margin: 0 0 20px 0;
+	background: #fff;
+}
+
+.box-title {
+	font-size: 17px;
+	padding: 12px 15px 10px;
+	background: #e5e5e5 url('../images/bg-box.gif') top left repeat-x;
+	margin-top: 1px;
+}
+.box-content {
+	padding: 20px;
+	font-size: 13px;
+	border-top: 1px solid #ccc;
+}
+
+
+/************ Table ************/
+#main-content table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#main-content table thead th {
+	font-weight: bold;
+	font-size: 15px;
+	border-bottom: 1px solid #ddd;
+}
+#main-content tbody { border-bottom: 1px solid #ddd; }
+#main-content tbody tr { background: #fff; }
+#main-content tbody tr.alt-row { background: #F0F0F0; }
+#main-content table td, #main-content table th {
+	padding: 10px;
+	line-height: 1.3em;
+}
+#main-content table tfoot td .form-mass-actions {
+	float:right;
+	padding: 5px 0;
+} 
+#main-content table tfoot td .form-mass-actions select {
+	padding: 4px;
+	border: 1px solid #ccc;
+}
+
+/*************** Forms ***************/
+
+form label {
+	display: block;
+	padding: 0 0 10px;
+	font-weight: bold;
+}
+
+form input.text-input, form select, form textarea, form .shortcuthtml {
+	padding: 6px;
+	font-size: 13px;
+	border: 1px solid #d5d5d5;
+	color: #333;
+}
+form .small-input { width: 25% !important; }
+form .medium-input { width: 50% !important; }
+form .large-input {	width: 97.5% !important; }
+form textarea { width: 97.5% !important; }
+form select {
+	padding: 4px;
+	background: #fff;
+}
+form input[type="checkbox"] {
+	padding: 0;
+	border: 0;
+	background: none;
+}
+
+/*************** Notifications ***************/
+
+.notification {
+	margin: 0 0 15px 0;
+	padding: 0;
+	border: 1px solid;
+	background-position: 10px 11px !important;
+	background-repeat: no-repeat !important;
+	font-size: 13px;
+	width: 99.8%;
+	color: #303030;
+}
+.notification span {
+	display:block;
+	font-style:normal;
+	padding: 10px 10px 10px 36px;
+	line-height: 1.5em;
+}
+.attention {
+	background: #F3F0C3 url('../images/attention.png') 10px 11px no-repeat;
+	border-color: #D7CD4F;
+}
+.info {
+	background: #CAD2EB url('../images/info.png');
+	border-color: #90A0D4;
+}
+.success {
+	background: #C7EEC1 url('../images/success.png');
+	border-color: #8DCC83;
+}
+.error {
+	background: #F3C5C5 url('../images/error.png');
+	border-color: #D78A8A;
+}
+
+/********************************      Sidebar      ********************************/
+
+#right-sidebar {
+	width: 222px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #000;
+	font-size: 11px;
+}
+#right-sidebar #right-sidebar-content {
+	margin: 20px 9px 0 0;
+	position:fixed;
+}
+#right-sidebar a, #right-sidebar a:active { color:#BC0000; }
+#right-sidebar a:hover { color:#CC0000; }
+#right-sidebar #admin-session-info { padding: 0 15px 20px 15px; }
+
+/* Sidebar Navigation Menu */
+#right-sidebar #navigation {
+	width: 206px;
+	padding: 0;
+	margin: 0 0 0 0;
+}
+#right-sidebar #navigation li {
+	list-style: none;
+	padding-bottom: 10px;
+	text-align: left;
+}
+#right-sidebar #navigation li a.navigation-parent {
+	background: transparent url('../images/sidebar-right-bg.gif') right center no-repeat; /* Background image for default color scheme - green */
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+}
+#right-sidebar #navigation li a.current {
+	background-image: url('../images/navigation-current.gif') !important;
+	color: #BC0000;
+	font-weight: bold;
+}
+#right-sidebar #navigation li a.current:hover { color: #333; }
+#right-sidebar #navigation ul {
+	padding: 0;
+	font-size: 12px;
+	margin: 0;
+}
+#right-sidebar #navigation ul li {
+	list-style: none;
+	margin: 0;
+	text-align: left;
+	padding: 0;
+}
+#right-sidebar #navigation ul li a {
+	padding: 8px 15px;
+	display: block;
+	color: #2F2F2F;
+	font-size: 13px;
+	line-height: 1.2em;
+}
+#right-sidebar #navigation ul li a:hover, #right-sidebar #navigation ul li a.current, #right-sidebar #navigation ul li a.current:hover { color: #BC0000; }
+#right-sidebar #navigation ul li a.current { background: transparent url('../images/menu-current-arrow.gif') left center no-repeat !important; }
+
+
+/********************************      Login Page      ********************************/
+
+body#login { background: #222 url('../images/bg-login.gif'); }
+#login-title {
+	width: 100%;
+	padding: 160px 0 20px 0;
+	text-align: center;
+}
+#login-content {
+	text-align: left;
+	width: 310px;
+	margin: 0 auto;
+}
+#login-content label {
+	margin-top:4px;
+	font-weight: normal;
+	font-size: 14px;
+	float: left;
+	width: 80px;
+	padding: 0;
+}
+#login-content input {
+	width: 200px;
+	float: right;
+	margin: 0 0 20px 0;
+	border: 0;
+	background: #fff;
+}
+#login-content p { padding: 0; }
+#login-content p .button { width: auto; }
+
+/*************** jQuery WYSIWYG ***************/
+
+div.shortcuthtml { border: 1px solid #cccccc; height:16px; background-color: #ffffff; width: 97.5%; }
+div.shortcuthtml * { margin: 0; padding: 0; }
+div.shortcuthtml ul.panel {  border-bottom:none; float: left; width: 100%; padding: 0 0 5px 0; }
+div.shortcuthtml ul.panel li { list-style-type: none; float: left; margin: 0 2px; padding: 0 !important;  background: #ffffff; background-image: none !important;}
+div.shortcuthtml ul.panel li.separator { height: 16px; margin: 0 4px; border-left: 1px solid #cccccc; }
+div.shortcuthtml ul.panel li a { display: block; border: 0; cursor: pointer; padding: 1px; margin:0 2px; }
+div.shortcuthtml ul.panel li a:hover, div.shortcuthtml ul.panel li a.active {  }
+div.shortcuthtml ul.panel li a.active { background-color: #f9f9f9; border: 1px solid #cccccc; border-left-color: #aaaaaa; border-top-color: #aaaaaa; padding: 0; }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Devilzc0de Interactive Class Offline - Programming #3</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+</head>
+<body>
+<div id="documentation_content">
+	<div class="title">Devilzc0de Interative Class Offline - Programming #3</div>
+	<p>Dokumentasi Devilzc0de Interactive Class (DIC) Offline 04/08/2012 &amp; Online 13/10/2012.</p>
+	
+	<p>Materi : Membuat halaman admin dari template yang sudah ada sehingga dapat menghasilkan situs website yang dinamis.</p>
+	<p>Sebelum melanjutkan ke materi, diharapkan peserta telah dapat menginstall PHP, WebServer, dan MySQL pada mesin yang digunakan.</p>
+	<p>Sehingga peserta dapat mempelajari : </p>
+	<ul>
+		<li>Tag-tag HTML, CSS dengan elemen ID maupun class yang biasa digunakan pada JavaScript.</li>
+		<li>Sintak PHP, variabel, kondisi, looping, dan fungsi pada PHP. ( <a href="http://ls-la.ditatompel.crayoncreative.net/dicprogramming2/" target="_blank">Lihat DIC Programming #2</a> )</li>
+		<li>Dasar MySQL query INSERT, UPDATE, DELETE dengan PHP.</li>
+		<li>Bagaimana menggunakan jQuery untuk memproses form dengan metode AJAX ke script PHP.</li>
+	</ul>
+	<p>Dengan materi yang diberikan, diharapkan peserta dapat mempelajari dan membongkar materi terlebih dahulu ( terutama untuk Sintak PHP, variabel, kondisi, looping, dan fungsi pada PHP serta Dasar MySQL query. ), menemukan masalah dan pertanyaan; kemudian mengembangkan materi yang diberikan sehingga kedepannya mampu membuat situs sederhana menggunakan PHP dan MySQL.</p>
+	
+	<h1 class="title" id="langkah_langkah"><a>1. Langkah-Langkah</a></h1>
+	<p>1. Pelajari HTML, CSS, dan beberapa JavaScript pada folder ./HTML. ( template )</p>
+	<p>2. Upload / letakan semua file yang ada di folder PHP ke WebServer, buat database yang akan digunakan, kemudian import struktur databasenya. ( ./dicoffline_programming.sql )</p>
+	<p>3. Konfigurasi ulang file config.php sesuai dengan mesin Anda.</p>
+	<p>4. Pelajari Sintak PHP, variabel, kondisi, looping, dan fungsi pada PHP serta Dasar MySQL query pada folder ./PHP tersebut.</p>
+	<p>5. Jika mengalami kesulitan dan tidak memiliki akses internet, cheat Sheet dan dokumentasi PHP dapat lihat dan dibaca-baca pada folder ./resources.</p>
+	
+	<h1 class="title" id="file_attachment"><a>2. Attachment</a></h1>
+	<ul class="submenu">
+		</li><a href="#isi_attachment">./</a></li> | 
+		</li><a href="#folder_php">Folder PHP</a></li>
+	</ul>
+	<h2 class="subtitle" id="isi_attachment">2.1 Isi Attachment</h2>
+	<pre>./dicoffline_programming.sql     =&gt; File database yang digunakan.
+./doc                            =&gt; Berisi file dokumentasi ini.
+
+./HTML                           =&gt; Berisi file template HTML website dan admin.
+./PHP                            =&gt; Berisi file website yang sudah jadi.
+
+./resources                      =&gt; berisi file2 referensi dan cheat sheet.</pre>
+	<h2 class="subtitle" id="folder_php">2.2 Keterangan pada folder PHP</h2>
+	<pre>./config.php          =&gt; Isi semua konfigurasi untuk aplikasi yang kita buat.
+
+./admin               =&gt; Folder halaman admin.
+./admin/action.php    =&gt; Aksi untuk proses tiap form pada halaman admin
+
+./archives            =&gt; Berisi file-file html static
+./articles.php        =&gt; Script untuk menampilkan isi database dari table dic_articles
+
+./css                 =&gt; Berisi file CSS
+
+./images              =&gt; Berisi gambar-gambar yang kita gunakan
+./images/mimetypes    =&gt; Berisi gambar-gambar untuk menampilkan icon Mime Type
+
+./jslib               =&gt; Berisi file-file JavaScript
+
+./libs/functions.php  =&gt; Berisi fungsi-fungsi yang kita gunakan.
+
+./themes              =&gt; Berisi file CSS untuk tampilan window</pre>
+	<h1 class="title" id="struktur_db"><a>3. Struktur Database</a></h1>
+	<ul class="submenu">
+		</li><a href="#dic_articles">dic_articles</a></li> | 
+		</li><a href="#dic_categories">dic_categories</a></li> |
+		</li><a href="#dic_files">dic_files</a></li> | 
+		</li><a href="#dic_mimetypes">dic_mimetypes</a></li>
+	</ul>
+	<p>Struktur database yang digunakan.</p>
+<pre>mysql&gt; SHOW TABLES;
++----------------------------------+
+| Tables_in_dicoffline_programming |
++----------------------------------+
+| dic_articles                     |
+| dic_categories                   |
+| dic_files                        |
+| dic_mimetypes                    |
++----------------------------------+
+</pre>
+	<h2 class="subtitle" id="dic_articles">3.1 Table dic_articles</h2>
+	<p>Struktur tabel dic_articles</p>
+	<pre>mysql> DESCRIBE dic_articles;
++---------------------+---------------------+------+-----+---------+----------------+
+| Field               | Type                | Null | Key | Default | Extra          |
++---------------------+---------------------+------+-----+---------+----------------+
+| article_id          | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| article_title       | text                | NO   |     | NULL    |                |
+| article_content     | longtext            | NO   |     | NULL    |                |
+| article_created_on  | datetime            | NO   |     | NULL    |                |
+| article_last_update | datetime            | NO   |     | NULL    |                |
++---------------------+---------------------+------+-----+---------+----------------+</pre>
+	<h2 class="subtitle" id="dic_categories">3.2 Table dic_categories</h2>
+	<p>Struktur tabel dic_categories</p>
+<pre>mysql> DESCRIBE dic_categories;
++----------------+-----------------+------+-----+---------+----------------+
+| Field          | Type            | Null | Key | Default | Extra          |
++----------------+-----------------+------+-----+---------+----------------+
+| category_id    | int(4) unsigned | NO   | PRI | NULL    | auto_increment |
+| category_title | varchar(200)    | NO   |     | NULL    |                |
+| category_show  | enum('Y','N')   | NO   |     | Y       |                |
++----------------+-----------------+------+-----+---------+----------------+
+</pre>
+		<h2 class="subtitle" id="dic_files">3.3 Table dic_files</h2>
+		<p>Struktur tabel dic_files</p>
+<pre>mysql> DESCRIBE dic_files;
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| file_id     | int(11) unsigned | NO   | PRI | NULL    | auto_increment |
+| file_title  | text             | NO   |     | NULL    |                |
+| file_url    | text             | NO   |     | NULL    |                |
+| category_id | int(4)           | NO   |     | NULL    |                |
+| mimetype_id | int(4)           | NO   |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+</pre>
+	<h2 class="subtitle" id="dic_mimetypes">3.4 Table dic_mimetypes</h2>
+	<p>Struktur tabel dic_mimetypes</p>
+<pre>mysql> DESCRIBE dic_mimetypes;
++------------------+-----------------+------+-----+---------+----------------+
+| Field            | Type            | Null | Key | Default | Extra          |
++------------------+-----------------+------+-----+---------+----------------+
+| mimetype_id      | int(4) unsigned | NO   | PRI | NULL    | auto_increment |
+| mimetype_title   | varchar(100)    | NO   |     | NULL    |                |
+| mimetype_picture | varchar(200)    | NO   |     | NULL    |                |
++------------------+-----------------+------+-----+---------+----------------+
+</pre>
+	
+</div>
+
+
+<div id="menu">
+	<ol class="toc">
+		<li><a href="#langkah_langkah">Langkah-langkah</a></li>
+		<li><a href="#file_attachment">Attachment</a></li>
+		<li><a href="#struktur_db">Struktur Database</a></li>
+	</ol>
+</div>
+
+
+</body>
+</html>
